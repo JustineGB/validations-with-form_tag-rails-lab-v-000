@@ -4,14 +4,15 @@
   <% if @author.errors.any? %>
     <div id="error_explanation">
       <h2>There were some errors:</h2>
+
       <ul>
-        <% @author.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <% @author.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  
+
   <div class="field<%= ' field_with_errors' if @author.errors[:name].any? %>">
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name", @author.name %>
@@ -22,10 +23,10 @@
     <%= text_field_tag "email", @author.email %>
   </div>
 
-  <div class="field"<%= ' field_with_errors' if @author.errors[:phone_number].any? %>">
+  <div class="field<%= ' field_with_errors' if @author.errors[:phone_number].any? %>">
     <%= label_tag "phone_number", "Phone Number" %>
     <%= text_field_tag "phone_number", @author.phone_number %>
   </div>
-  
+
   <%= submit_tag "Create" %>
 <% end %>
