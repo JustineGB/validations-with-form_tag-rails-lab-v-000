@@ -1,10 +1,5 @@
 <h2>Create an Author</h2>
 
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
   
 <%= form_tag authors_path, method: "post" do %>
   <% if @author.errors.any? %>
