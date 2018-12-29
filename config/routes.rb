@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  resources :authors, only: [:index, :new, :create, :edit, :update]
-  resources :posts, only: [:index, :new, :create, :edit, :update]
-  get '/authors/:id', to: 'authors#show'
-  get '/posts/:id', to: 'posts#show'
+  resources :authors
+  resources :posts
   
   
   
