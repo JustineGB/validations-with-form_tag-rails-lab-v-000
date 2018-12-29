@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :authors
+  resources :authors, only []
   resources :posts
 
 
