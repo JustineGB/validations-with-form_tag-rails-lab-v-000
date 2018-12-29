@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :authors, only: [:index, :new, :create]
+  resources :authors, only: [:index, :new, :create, :edit, :update]
   resources :posts
+  get '/authors/:id', to: 'authors#show'
+  
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
