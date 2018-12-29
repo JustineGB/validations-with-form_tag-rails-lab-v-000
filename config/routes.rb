@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :authors, only []
+  resources :authors, only: [:index, :new, :create]
   resources :posts
 
 
